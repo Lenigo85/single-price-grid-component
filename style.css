@@ -26,10 +26,9 @@ body {
     display: grid;
     justify-self: center;
     align-content: center;
+    width: 100vw;
     /*
-    max-width: calc(100vw - 10%);
-    max-height: calc(100vh - 10%);
-    background-image: url(./design/mobile-design.jpg);
+    background-image: url(./design/desktop-design.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     */
@@ -108,7 +107,6 @@ p {
 }
 
 .box-2__p {
-    font-size: 16px;
     margin-bottom: 25px;
 }
 
@@ -137,4 +135,49 @@ p {
 
 .box-2__p, .box-3__p, .price, .button {
     color: var(--light-gray);
+}
+
+
+@media screen and (min-width: 650px) {
+    .boxes {
+        grid-template-rows: minmax(217px, 1fr) minmax(260px, 1fr);
+        grid-template-columns: repeat(2, 318px);
+    }
+
+    .box {
+        padding: 41px 40px 0 40px;
+    }
+
+
+
+    .box-1 {
+        grid-column: 1 / 3;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .box-2 {
+        border-bottom-left-radius: 10px;
+    }
+
+    .box-3 {
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+
+    .box-1__h1 {
+        font-size: 1.5em;
+        letter-spacing: -0.3px;
+    }
+
+    b {
+        font-size: 1.1em;
+        letter-spacing: 0px;
+    }
+
+    .box-1__p {
+        font-size: 1em;
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
 }
