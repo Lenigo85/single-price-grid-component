@@ -140,7 +140,7 @@ p {
 
 @media screen and (min-width: 650px) {
     .boxes {
-        grid-template-rows: minmax(217px, 1fr) minmax(260px, 1fr);
+        grid-template-rows: minmax(217px, min-content) minmax(260px, min-content);
         grid-template-columns: repeat(2, 318px);
     }
 
